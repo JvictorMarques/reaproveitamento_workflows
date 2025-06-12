@@ -5,8 +5,12 @@ on:
         ambiente:
           description: 'Ambiente de destino para o deploy'
           default: 'producao'
-          type: string
           required: true
+          type: choice
+          options:
+            - producao
+            - homologacao
+            - desenvolvimento
 jobs:
     CI:
         runs-on: ubuntu-latest
