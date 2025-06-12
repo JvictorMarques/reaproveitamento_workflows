@@ -1,9 +1,16 @@
 name: CD Fake
 on: 
   workflow_call:
+    inputs:
+      ambiente:
+        description: 'Ambiente de destino para o deploy'
+        type: string
+        default: 'desenvolvimento'
+        required: true
+
 jobs:
   CD:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy no ambiente
-        run: echo "Executando o deploy no ambiente de desenvolvimento"
+        run: echo "Executando o deploy no ambiente de ${{ inputs.ambiente }}"
