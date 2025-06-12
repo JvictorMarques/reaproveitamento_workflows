@@ -27,4 +27,4 @@ jobs:
       # with:
       #   ambiente: ${{ inputs.ambiente }}
       secrets:
-        ambiente: ${{ secrets.AMBIENTE }}
+        ambiente: ${{ secrets.AMBIENTE_TESTE }}
