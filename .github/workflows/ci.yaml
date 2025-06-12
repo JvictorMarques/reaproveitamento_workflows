@@ -26,3 +26,5 @@ jobs:
       uses: ./.github/workflows/cd.yaml
       with:
         ambiente: ${{ inputs.ambiente }}
+      secrets:
+        ambiente: ${{ secrets.AMBIENTE }}
