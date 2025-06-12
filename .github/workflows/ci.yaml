@@ -1,16 +1,16 @@
 name: CI Fake
 on: 
     workflow_dispatch:
-      inputs:
-        ambiente:
-          description: 'Ambiente de destino para o deploy'
-          default: 'producao'
-          required: true
-          type: choice
-          options:
-            - producao
-            - homologacao
-            - desenvolvimento
+      # inputs:
+      #   ambiente:
+      #     description: 'Ambiente de destino para o deploy'
+      #     default: 'producao'
+      #     required: true
+      #     type: choice
+      #     options:
+      #       - producao
+      #       - homologacao
+      #       - desenvolvimento
 jobs:
     CI:
         runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
     CD:
       needs: CI
       uses: ./.github/workflows/cd.yaml
-      with:
-        ambiente: ${{ inputs.ambiente }}
+      # with:
+      #   ambiente: ${{ inputs.ambiente }}
       secrets:
         ambiente: ${{ secrets.AMBIENTE }}

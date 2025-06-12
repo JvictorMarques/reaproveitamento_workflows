@@ -1,11 +1,11 @@
 name: CD Fake
 on: 
   workflow_call:
-    inputs:
-      ambiente:
-        description: 'Ambiente de destino para o deploy'
-        type: string
-        required: true
+    # inputs:
+    #   ambiente:
+    #     description: 'Ambiente de destino para o deploy'
+    #     type: string
+    #     required: true
 
 jobs:
   deploy:
