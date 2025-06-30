@@ -23,7 +23,7 @@ jobs:
               run: echo "Publicação da Relase final"
     CD:
       needs: CI
-      uses: ./.github/workflows/cd.yaml
+      uses: ./.github/workflows/workflow_call.yaml
       # with:
       #   ambiente: ${{ inputs.ambiente }}
       secrets:

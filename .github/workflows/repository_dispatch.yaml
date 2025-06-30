@@ -1,0 +1,14 @@
+name: CD Fake
+on: 
+  repository_dispatch:
+    types:
+      - deploy-remoto
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy no ambiente
+        run: echo "Executando o deploy no ambiente de ${{ github.event.client_payload.ambiente }}"
+      - name: Notificação de Deploy
+        run: |
+          echo "Notificando o deploy no ambiente de ${{ github.event.client_payload.ambiente }}"
