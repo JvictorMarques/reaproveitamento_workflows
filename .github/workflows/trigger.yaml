@@ -1,4 +1,4 @@
-name: CI Fake
+name: Trigger do Workflow Call
 on: 
     workflow_dispatch:
       # inputs:

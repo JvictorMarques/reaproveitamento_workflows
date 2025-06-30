@@ -1,4 +1,4 @@
-name: CD Fake
+name: Executando o Workflow Call
 on: 
   workflow_call:
     # inputs:
